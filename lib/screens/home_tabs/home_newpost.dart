@@ -35,7 +35,27 @@ class _HomeNewpostTabState extends State<HomeNewpostTab> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text(
-            "Select an image.",
+            "Please Select an image.",
+          ),
+        ),
+      );
+      return;
+    }
+    if (_githubURL.text.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            "Please Select a repository.",
+          ),
+        ),
+      );
+      return;
+    }
+    if (_caption.text.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            "Please write a caption.",
           ),
         ),
       );
