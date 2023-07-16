@@ -57,7 +57,6 @@ class _HomeHomeTab extends State<HomeHomeTab> {
 
     result.then((response) {
       List docs = response.documents;
-      print(docs);
       for (int i = 0; i < docs.length; ++i) {
         setState(() {
           users.add(docs[i].data["username"]);
@@ -174,8 +173,6 @@ class _HomeHomeTab extends State<HomeHomeTab> {
     // Create a new document in our posts collection.
     String dt = DateTime.now().toString();
     DateTime dta = DateTime.parse(dt);
-    print(dt);
-    print(dta);
     Future result = ApiClient.databases.createDocument(
         databaseId: "6481a01aac2dfa64e4f8",
         collectionId: "6481a107205097a5ab41",

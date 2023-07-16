@@ -233,7 +233,6 @@ class _HomeNewpostTabState extends State<HomeNewpostTab> {
                             setState(() {
                               _language = resultLang;
                               _githubURL.text = result!['html_url']!;
-                              // print(language);
 
                               print('Language is: $_language');
                             });
