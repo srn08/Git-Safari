@@ -187,11 +187,20 @@ class _HomeProfileTabState extends State<HomeProfileTab> {
                           ),
                           TextButton(
                             onPressed: () {
-                              context.read<AuthAPI>().account.updatePrefs(
-                                  prefs: {"bio": _bioController.text});
-
-                              Navigator.pop(context);
-                              setState(() {});
+                              if (_bioController.text.isEmpty) {
+                                Navigator.pop(context);
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text("Please Enter A Bio"),
+                                    backgroundColor: Colors.red,
+                                  ),
+                                );
+                              } else {
+                                context.read<AuthAPI>().account.updatePrefs(
+                                    prefs: {"bio": _bioController.text});
+                                Navigator.pop(context);
+                                setState(() {});
+                              }
                             },
                             child: const Text('OK'),
                           ),
