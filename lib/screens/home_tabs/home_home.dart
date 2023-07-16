@@ -295,75 +295,60 @@ class _HomeHomeTab extends State<HomeHomeTab> {
                     width: 80,
                   ),
                   Spacer(),
-                  PopupMenuButton(
-                      color: Colors.black,
-                      icon: SvgPicture.asset(
-                        'assets/download.svg',
-                      ),
-                      onSelected: (result) {
-                        if (result == 0) {
-                          showModalBottomSheet(
-                              context: context,
-                              builder: (BuildContext context) {
-                                return Container(
-                                  color: Color(0xff111625),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 32),
-                                        child: Text(
-                                          'Add a story',
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 24),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 32),
-                                        child: Text(
-                                          'Stories disappear after 24 hours.',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontStyle: FontStyle.italic,
-                                            color: Colors.grey,
-                                            fontSize: 16,
-                                          ),
-                                        ),
-                                      ),
-                                      Spacer(),
-                                      GradientButton(
-                                          text: "Select Image",
-                                          icon: Icons.broken_image_outlined,
-                                          onPressed: () => selectImage(context),
-                                          width: 200),
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      GradientButton(
-                                          text: "Add Story",
-                                          icon: Icons.add_a_photo_outlined,
-                                          onPressed: () =>
-                                              createNewStory(context),
-                                          width: 200),
-                                      Spacer(),
-                                    ],
+                  GestureDetector(
+                    child: SvgPicture.asset(
+                      'assets/download.svg',
+                      height: 40,
+                      width: 40,
+                    ),
+                    onTap: () => showModalBottomSheet(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return Container(
+                            color: Color(0xff111625),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 32),
+                                  child: Text(
+                                    'Add a story',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 24),
                                   ),
-                                );
-                              });
-                        }
-                      },
-                      itemBuilder: (BuildContext context) {
-                        return [
-                          PopupMenuItem(
-                            value: 0, //---add this line
-                            child: Text(
-                              'Story',
-                              style: TextStyle(color: Colors.white),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 32),
+                                  child: Text(
+                                    'Stories disappear after 24 hours.',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontStyle: FontStyle.italic,
+                                      color: Colors.grey,
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                ),
+                                Spacer(),
+                                GradientButton(
+                                    text: "Select Image",
+                                    icon: Icons.broken_image_outlined,
+                                    onPressed: () => selectImage(context),
+                                    width: 200),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                GradientButton(
+                                    text: "Add Story",
+                                    icon: Icons.add_a_photo_outlined,
+                                    onPressed: () => createNewStory(context),
+                                    width: 200),
+                                Spacer(),
+                              ],
                             ),
-                          ),
-                        ];
-                      }),
+                          );
+                        }),
+                  ),
                 ],
               ),
             ),
