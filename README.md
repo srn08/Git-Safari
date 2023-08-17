@@ -1,8 +1,8 @@
 <p  align="center">
-<a  href="https://flutter.dev"  target="_blank"><img  height="39"  src="https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png"  alt="Flutter Logo"></a> <a>&nbsp;&nbsp;&nbsp;</a>
+<a  href="https://flutter.dev"  target="_blank"><img  height="80"  src="https://pixlok.com/wp-content/uploads/2021/05/flutter-logo.jpg"  alt="Flutter Logo"></a> <a>&nbsp;&nbsp;&nbsp;</a>
 <a  href="https://appwrite.io"  target="_blank"><img  width="260"  height="39"  src="https://appwrite.io/images/github-logo.png"  alt="Appwrite Logo"></a>
 <hr>
-<img  height="200" width="50%"  src="assets/logo/gitsafari_logo.png"  alt="Git Safari Logo">
+<img  height="200"   src="assets/logo/gitsafari_logo.png"  alt="Git Safari Logo">    
 </p>
 
 # Git Safari
@@ -19,44 +19,6 @@ An app made to explore and find new GitHub repositories.
 ### Appwrite
 
 Appwrite backend server is designed to run in a container environment. Running your server is as easy as running one command from your terminal. You can either run Appwrite on your localhost using docker-compose or on any other container orchestration tool like Kubernetes, Docker Swarm or Rancher.
-
-The easiest way to start running your Appwrite server is by running our docker-compose file. Before running the installation command make sure you have [Docker](https://www.docker.com/products/docker-desktop) installed on your machine:
-
-### Unix
-
-```bash
-docker run -it --rm \
-    --volume /var/run/docker.sock:/var/run/docker.sock \
-    --volume "$(pwd)"/appwrite:/usr/src/code/appwrite:rw \
-    --entrypoint="install" \
-    appwrite/appwrite:1.3.7
-```
-
-### Windows
-
-#### CMD
-
-```cmd
-docker run -it --rm ^
-    --volume //var/run/docker.sock:/var/run/docker.sock ^
-    --volume "%cd%"/appwrite:/usr/src/code/appwrite:rw ^
-    --entrypoint="install" ^
-    appwrite/appwrite:1.3.7
-```
-
-#### PowerShell
-
-```powershell
-docker run -it --rm `
-    --volume /var/run/docker.sock:/var/run/docker.sock `
-    --volume ${pwd}/appwrite:/usr/src/code/appwrite:rw `
-    --entrypoint="install" `
-    appwrite/appwrite:1.3.7
-```
-
-Once the Docker installation completes, go to <http://localhost> to access the Appwrite console from your browser. Please note that on non-linux native hosts, the server might take a few minutes to start after installation completes.
-
-For advanced production and custom installation, check out our Docker [environment variables](docs/tutorials/environment-variables.md) docs. You can also use our public [docker-compose.yml](https://appwrite.io/docker-compose.yml) file to manually set up and environment.
 
 ### Flutter
 
@@ -82,41 +44,12 @@ The CLI is packaged both as an [npm module](https://www.npmjs.com/package/appwri
 
 If you have npm set up, run the command below to install the CLI
 
+Prerequisites : [Node.js (for npm)](https://nodejs.org/en/download)
+
 ```bash
 npm install -g appwrite-cli
 ```
 
-## Install with Script
-
-For a completely dependency-free installation, the CLI also ships with a convenient installation script for your operating system
-
-## MacOS
-
-Using [Homebrew](https://brew.sh/)
-
-```bash
-brew tap appwrite/sdk-for-cli https://github.com/appwrite/sdk-for-cli
-brew update
-brew install --HEAD appwrite
-```
-
-or terminal
-
-```bash
-curl -sL https://appwrite.io/cli/install.sh | bash
-```
-
-## Windows
-
-```powershell
-iwr -useb https://appwrite.io/cli/install.ps1 | iex
-```
-
-## Linux
-
-```bash
-curl -sL https://appwrite.io/cli/install.sh | bash
-```
 
 After the installation is complete, verify the install using
 
@@ -194,13 +127,13 @@ Finally, you need to register the flutter app. On appwrite console (http://local
 
 ```bash
 .
-├── android # android files
+├── android # android files (auto generated)
 ├── assets # assets (images)
-├── ios # ios files
+├── ios # ios files (auto generated)
 └── lib
     ├── api # Logic for handling Appwrite and GitHub APIs
     ├── models # Custom Models
-    ├── screens
+    ├── screens # Various Screens of the App
     │   └── home_tabs # Tabs for home screen
     ├── utils # Api info and Local DB Logic
     └── widgets # Custom widgets
