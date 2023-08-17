@@ -1,5 +1,5 @@
 <p  align="center">
-<a  href="https://flutter.dev"  target="_blank"><img  height="80"  src="https://pixlok.com/wp-content/uploads/2021/05/flutter-logo.jpg"  alt="Flutter Logo"></a> <a>&nbsp;&nbsp;&nbsp;</a>
+<a  href="https://flutter.dev"  target="_blank"><img  height="60"  src="https://static.wikia.nocookie.net/logo-timeline/images/c/cf/4B4A9751-D2BF-4A93-BDCC-CDCA5326B65F.png/revision/latest/scale-to-width-down/1124?cb=20210426191500"  alt="Flutter Logo"></a> <a>&nbsp;&nbsp;&nbsp;</a>
 <a  href="https://appwrite.io"  target="_blank"><img  width="260"  height="39"  src="https://appwrite.io/images/github-logo.png"  alt="Appwrite Logo"></a>
 <hr>
 <img  height="200"   src="assets/logo/gitsafari_logo.png"  alt="Git Safari Logo">    
